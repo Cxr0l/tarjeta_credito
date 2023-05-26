@@ -26,22 +26,38 @@ inputNumerosTarjeta.addEventListener('input', function() {
 
 const inputMes = document.getElementById('cardinput-mes');
 const inputAño = document.getElementById('cardinput-año');
+
 const spanMes = document.getElementById('card-mes');
 const spanAño = document.getElementById('card-año');
 
+const mesOriginal = spanMes.textContent;
+const añoOriginal = spanAño.textContent;
+
 inputMes.addEventListener('input', function() {
-    spanMes.textContent = inputMes.value;
+    if (inputMes.value === '') {
+        spanMes.textContent = mesOriginal;
+    } else {
+        spanMes.textContent = inputMes.value;
+    }
 });
 
 inputAño.addEventListener('input', function() {
-    spanAño.textContent = inputAño.value;
+    if (inputAño.value === '') {
+        spanAño.textContent = añoOriginal;
+    } else {
+        spanAño.textContent = inputAño.value;
+    }
 });
-
 
 
 const inputCVV = document.getElementById('card-CVV');
 const cvv = document.querySelector('.CVV');
+const cvvOriginal = cvv.textContent;
 
 inputCVV.addEventListener('input', function() {
-    cvv.textContent = inputCVV.value;
+    if (inputCVV.value === '') {
+        cvv.textContent = cvvOriginal;
+    } else {
+        cvv.textContent = inputCVV.value;
+    }
 });
