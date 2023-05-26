@@ -29,3 +29,12 @@ inputMes.addEventListener('input', function() {
 inputAño.addEventListener('input', function() {
     spanAño.textContent = inputAño.value;
 });
+
+
+
+const inputCVV = document.getElementById('card-CVV');
+const cvv = document.querySelector('.CVV');
+
+inputCVV.addEventListener('input', function() {
+    cvv.textContent = inputCVV.value;
+});
