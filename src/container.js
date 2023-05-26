@@ -1,21 +1,28 @@
 const inputNombreTarjeta = document.getElementById('nombre-tarjeta');
 const cardName = document.querySelector('.card-name');
+const nombreOriginal = cardName.textContent;
 
 inputNombreTarjeta.addEventListener('input', function() {
-    cardName.textContent = inputNombreTarjeta.value;
+    if (inputNombreTarjeta.value === '') {
+        cardName.textContent = nombreOriginal;
+    } else {
+        cardName.textContent = inputNombreTarjeta.value;
+    }
 });
-
 
 
 
 const inputNumerosTarjeta = document.getElementById('numeros-tarjeta');
 const cardNumber = document.querySelector('.card-number');
+const numerosOriginales = cardNumber.textContent;
 
 inputNumerosTarjeta.addEventListener('input', function() {
-    cardNumber.textContent = inputNumerosTarjeta.value;
+    if (inputNumerosTarjeta.value === '') {
+        cardNumber.textContent = numerosOriginales;
+    } else {
+        cardNumber.textContent = inputNumerosTarjeta.value;
+    }
 });
-
-
 
 const inputMes = document.getElementById('cardinput-mes');
 const inputAño = document.getElementById('cardinput-año');
