@@ -1,0 +1,20 @@
+.container{
+    background-image: url("../img/main-normal.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: auto 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 800px){
+    
+    .container{
+        background-image: url("../img/main-mobil.png");
+        background-position: top;
+        background-size: 100%;
+        padding-bottom: 2rem;
+    }
+}

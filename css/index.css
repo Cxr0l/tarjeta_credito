@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+@import "./conteiner.css";
+@import "./cards.css";
+@import "./formulario.css";
+@import "./continue.css";
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light: #d8d5d2;
+    --dark: hsl(279, 6%, 55%);
+    --very-dark: #0B2447;
+
+    --red: hsl(0, 100%, 66%);
+};
+
+{}
+
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    background-color: var(--white);
+}

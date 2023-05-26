@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Tarjeta de credito</title>
+</head>
+<body class="body">
+    <main class="container">
+        
+        <section class="tarjetas">
+            <div class="card-1">
+                <img class="img-card1" src="./img/card-front.png" alt="tarjeta de frente">
+                <div class="info-card-1">
+                    <img class="icon-logo" src="./icon/icon-logo.png" alt="logo card" width="40">
+                    <img class="icon-chip" src="./icon/icon-chip.png" alt="chip card" width="52">
+                    <div>
+                        <p class="card-number" id="card-number">0000 0000 0000 0000</p>
+                        <div class="datos-card-1">
+                            <p class="card-name" id="card-name">Erika Gonzales</p>
+                            <p class="card-number2">
+                                <span class="card-mes" id="card-mes">00</span>
+                                /
+                                <span class="card-año" id="card-año">00</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card-2">
+                <img src="./img/card-back.png" alt="tarjeta por detras">
+                <div class="info-card-2">
+                    <p class="CVV" id="CVV">000</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <form class="form">
+                <div class="form-datos">
+                    <label class="label" for="nombre-tarjeta">Titular de la Tarjeta</label>
+                    <input class="input" type="text" placeholder="ej. Erika Gonzales" id="nombre-tarjeta">
+                </div>
+                <div class="form-error-holder">
+                    <div class="error-holder error"></div>
+                </div>
+
+                <div class="form-datos">
+                    <label class="label"  for="numeros-tarjeta">Numero de Tarjeta</label>
+                    <input class="input" type="text" maxlength="19" placeholder="ej. 1234 5678 9123 0000" id="numeros-tarjeta">
+                </div>
+                <div class="form-error-number">
+                    <div class="error-number error"></div>
+                </div>
+
+                <div class="form-datos double">
+                    <div class="rows">
+                        <label class="label"  for="card-mes">F. Vencimiento (MM/AA)</label>
+                        <div class="columns">
+                            <input class="input" type="text" maxlength="2" name="card-mes" placeholder="MM" id="card-mes">
+
+                            <input class="input" type="text" maxlength="2" name="card-año" placeholder="AA" id="card-año">
+                        </div>
+                    </div>
+
+                    <div class="rows">
+                        <label class="label"  for="card-CVV">CVV</label>
+                        <input class="input" type="text" maxlength="3" name="card-CVV" placeholder="ej. 123" id="card-CVV">
+                    </div>
+                </div>
+
+                <div class="error-double">
+                    <div class="form-error-fechas">
+                        <div class="error-mes error"></div>
+                        <div class="error-año error"></div>
+                    </div>
+    
+                    <div class="form-error-CVV">
+                        <div class="error-CVV error"></div>
+                    </div>
+                </div>
+                
+
+                <div class="form-datos">
+                    <button class="button" type="submit">Confirmar</button>
+                </div>
+
+                <!-- <section class="continue">
+                    <img class="img-continue" src="./icon/icon-complete.png" alt="icon-complete" width="80" height="80">
+                    <div class="continue-parrafos">
+                        <p class="parrafo-gracias">Gracias!</p>
+                        <p class="parrafo-detalles">Hemos agregado los detalles de tu tarjeta</p>
+                    </div>
+                    <div class="continue-button">
+                        <button class="button" id="button-continue">Continue</button>
+                    </div>
+                </section> -->
+            </form>
+        </section>
+        
+    </main>
+</body>
+</html>

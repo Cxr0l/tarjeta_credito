@@ -1,0 +1,113 @@
+.formulario{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: auto;
+}
+
+.form{
+    width: 25rem;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.form-datos{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-datos.double{
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.form-datos2.double > div {
+    width: 50%;
+}
+
+.columns{
+    display: flex;
+    gap: .5rem;
+}
+
+.columns input {
+    width: 100%;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    border: 1px solid var(--light);
+    padding: .75rem;
+    border-radius: .5rem;
+    font-family: 'Space Grotesk';
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    color: var(--very-dark);
+    margin-bottom: .25rem;
+}
+
+
+
+.error{
+    color: var(--red);
+    margin: -15px 0;
+}
+
+.error-double{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.error-double > div {
+    width: 50%;
+    display: flex;
+}
+
+.form-error-fechas{
+    gap: 4rem;
+}
+
+
+
+.button {
+    background-color: var(--very-dark);
+    color: var(--white);
+    font-size: 1rem;
+    padding-block: .75rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 0;
+}
+
+@media screen and (max-width: 800px){
+    .formulario{
+        
+    }
+
+    .form{
+        .form{
+            width: 100%;
+            max-width: 30rem;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 2rem;
+            padding-top: 0;
+        }
+    }
+}
