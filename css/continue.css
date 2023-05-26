@@ -1,0 +1,35 @@
+.continue{
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.continue-parrafos{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.parrafo-gracias{
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    margin-bottom: 2px;
+    color: var(--very-dark);
+}
+
+.parrafo-detalles{
+    color: var(--dark);
+}
+
+.continue button{
+    width: 90%;
+}
+
+.close {
+    display: none;
+}
