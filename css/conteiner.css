@@ -11,10 +11,28 @@
 
 @media screen and (max-width: 800px){
     
-    .container{
-        background-image: url("../img/main-mobil.png");
+    .container {
+        background-image: url(../img/main-mobil.png);
+        background-position: inherit;
+        background-size: cover;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: auto;
+        height: 128pt;
+        gap: 76pt;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        background-image: url(../img/main-mobil.png);
         background-position: top;
         background-size: 100%;
         padding-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: auto;
+        gap: 100pt;
     }
 }
