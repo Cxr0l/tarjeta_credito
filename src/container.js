@@ -95,9 +95,9 @@ function verificarCampo(input, error, mensajeError) {
     if (/[^0-9]+/.test(input.value)) {
         error.textContent = mensajeError;
         input.value = '';
-    } else if (input.value > 12) { // Nueva verificación de límite
+    } else if (inputMes.value > 12) { // Nueva verificación de límite
         error.textContent = 'Solo números entre 1 y 12';
-        input.value = '';
+        inputMes.value = '';
     } else {
         error.textContent = '';
     }
