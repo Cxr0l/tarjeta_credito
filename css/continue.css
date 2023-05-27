@@ -30,6 +30,10 @@
     width: 90%;
 }
 
-.close {
+.continue.close {
     display: none;
+}
+
+.continue.open{
+    display: flex;
 }

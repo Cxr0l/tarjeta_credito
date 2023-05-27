@@ -42,7 +42,7 @@
             <form class="form">
                 <div class="form-datos">
                     <label class="label" for="nombre-tarjeta">Titular de la Tarjeta</label>
-                    <input class="input" type="text" placeholder="ej. Erika Gonzales" id="nombre-tarjeta">
+                    <input class="input" type="text" maxlength="25" placeholder="ej. Erika Gonzales" id="nombre-tarjeta" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" required>
                 </div>
                 <div class="form-error-holder">
                     <div class="error-holder error"></div>
@@ -50,7 +50,7 @@
 
                 <div class="form-datos">
                     <label class="label"  for="numeros-tarjeta">Numero de Tarjeta</label>
-                    <input class="input" type="text" maxlength="19" placeholder="ej. 1234 5678 9123 0000" id="numeros-tarjeta">
+                    <input class="input" type="text" maxlength="19" placeholder="ej. 1234 5678 9123 0000" id="numeros-tarjeta" required>
                 </div>
                 <div class="form-error-number">
                     <div class="error-number error"></div>
@@ -60,22 +60,21 @@
                     <div class="rows">
                         <label class="label"  for="card-mes">F. Vencimiento (MM/AA)</label>
                         <div class="columns">
-                            <input class="input" type="text" maxlength="2" name="card-mes" placeholder="MM" id="cardinput-mes">
+                            <input class="input" type="text" maxlength="2" name="card-mes" placeholder="MM" id="cardinput-mes" required>
 
-                            <input class="input" type="text" maxlength="2" name="card-año" placeholder="AA" id="cardinput-año">
+                            <input class="input" type="text" maxlength="2" name="card-año" placeholder="AA" id="cardinput-año" required>
                         </div>
                     </div>
 
                     <div class="rows">
                         <label class="label"  for="card-CVV">CVV</label>
-                        <input class="input" type="text" maxlength="3" name="card-CVV" placeholder="ej. 123" id="card-CVV">
+                        <input class="input" type="text" maxlength="3" name="card-CVV" placeholder="ej. 123" id="card-CVV" required>
                     </div>
                 </div>
 
                 <div class="error-double">
                     <div class="form-error-fechas">
                         <div class="error-mes error"></div>
-                        <div class="error-año error"></div>
                     </div>
     
                     <div class="form-error-CVV">
@@ -84,11 +83,11 @@
                 </div>
                 
 
-                <div class="form-datos">
+                <div class="form-datos options" id="datos-button">
                     <button class="button" type="submit">Confirmar</button>
                 </div>
 
-                <section class="continue close">
+                <section class="continue close" id="continue">
                     <img class="img-continue" src="./icon/icon-complete.png" alt="icon-complete" width="80" height="80">
                     <div class="continue-parrafos">
                         <p class="parrafo-gracias">Gracias!</p>

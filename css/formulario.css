@@ -63,6 +63,7 @@
 .error{
     color: var(--red);
     margin: -15px 0;
+    font-size: .80rem;
 }
 
 .error-double{
