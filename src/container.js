@@ -173,19 +173,14 @@ const form = document.querySelector("#form");
 const continuePart = document.querySelector("#continue");
 const buttonContinue = document.querySelector("#button-continue");
 
-// form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     form.classList.add("disabled");
-//     continuePart.classList.remove("disabled");
-// })
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    form.classList.add("close");
+    continuePart.classList.remove("close");
+})
 
-// buttonContinue.addEventListener("click", () => {
-//     form.classList.remove("disabled");
-//     continuePart.classList.add("disabled");
-//     form.reset();
-//     cardName.innerText = "Jane Appleseed";
-//     cardNumber.innerText = "0000 0000 0000 0000";
-//     cardMonth.innerText = "00";
-//     cardYear.innerText = "00";
-//     cardCVC.innerText = "000";
-// })
+buttonContinue.addEventListener("click", () => {
+    form.classList.remove("close");
+    continuePart.classList.add("close");
+    form.reset();
+})
