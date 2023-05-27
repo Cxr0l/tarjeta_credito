@@ -35,6 +35,7 @@ inputNombreTarjeta.addEventListener('keyup', function() {
 
 
 
+
 //NUMEROS
 const inputNumerosTarjeta = document.getElementById('numeros-tarjeta');
 const cardNumber = document.querySelector('.card-number');
@@ -68,6 +69,8 @@ inputNumerosTarjeta.addEventListener('keyup', function() {
         actualizarTarjeta();
     }
 });
+
+
 
 
 
@@ -126,6 +129,8 @@ inputAño.addEventListener('keyup', function() {
 });
 
 
+
+
 //CVV
 const inputCVV = document.getElementById('card-CVV');
 const cvv = document.querySelector('.CVV');
@@ -159,3 +164,28 @@ inputCVV.addEventListener('keyup', function() {
         actualizarCVV();
     }
 });
+
+
+
+//BOTONES
+
+const form = document.querySelector("#form");
+const continuePart = document.querySelector("#continue");
+const buttonContinue = document.querySelector("#button-continue");
+
+// form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     form.classList.add("disabled");
+//     continuePart.classList.remove("disabled");
+// })
+
+// buttonContinue.addEventListener("click", () => {
+//     form.classList.remove("disabled");
+//     continuePart.classList.add("disabled");
+//     form.reset();
+//     cardName.innerText = "Jane Appleseed";
+//     cardNumber.innerText = "0000 0000 0000 0000";
+//     cardMonth.innerText = "00";
+//     cardYear.innerText = "00";
+//     cardCVC.innerText = "000";
+// })
