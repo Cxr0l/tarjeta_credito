@@ -24,12 +24,27 @@
 
 .parrafo-detalles{
     color: var(--dark);
+    text-align: center;
 }
 
 .continue button{
     width: 90%;
 }
 
-.continue.close {
+/* .continue.close {
     display: none;
+} */
+
+@media screen and (max-width: 800px){
+    .continue{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0rem !important;
+        padding-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        }
 }
