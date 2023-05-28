@@ -111,3 +111,12 @@
 
 }
 
+@media screen and (max-width: 400px){
+    .error{
+        font-size: .61rem;
+    }
+
+    .form-error-CVV{
+        margin-left: 3rem;
+    }
+}

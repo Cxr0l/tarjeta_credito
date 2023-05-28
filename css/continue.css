@@ -28,12 +28,12 @@
 }
 
 .continue button{
-    width: 90%;
+    width: 100%;
 }
 
-/* .continue.close {
+.continue.close {
     display: none;
-} */
+}
 
 @media screen and (max-width: 800px){
     .continue{
