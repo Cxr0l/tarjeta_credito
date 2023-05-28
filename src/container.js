@@ -183,4 +183,9 @@ buttonContinue.addEventListener("click", () => {
     form.classList.remove("close");
     continuePart.classList.add("close");
     form.reset();
+    cardName.textContent = nombreOriginal
+    cardNumber.textContent = numerosOriginales;
+    spanMes.textContent = mesOriginal;
+    spanAño.textContent = añoOriginal;
+    cvv.textContent = cvvOriginal;
 })
