@@ -13,11 +13,14 @@ function actualizarTarjetaLetras() {
 }
 
 function verificarNombreTarjeta() {
-    if (/[^A-Za-zñÑáéíóúÁÉÍÓÚ\s]/.test(inputNombreTarjeta.value)) {
-        errorHolder.textContent = 'Solo se permiten letras';
-        inputNombreTarjeta.value = '';
+    if (/^\s/.test(inputNombreTarjeta.value)) { // verifica si el primer carácter es un espacio en blanco
+      errorHolder.textContent = '';
+      inputNombreTarjeta.value = '';
+    } else if (/[^A-Za-zñÑáéíóúÁÉÍÓÚ\s]/.test(inputNombreTarjeta.value)) { // verifica si hay caracteres que no sean letras
+      errorHolder.textContent = 'Solo se permiten letras';
+      inputNombreTarjeta.value = '';
     } else {
-        errorHolder.textContent = '';
+      errorHolder.textContent = '';
     }
 }
 
@@ -51,7 +54,7 @@ function actualizarTarjeta() {
 }
 
 function verificarNumeroTarjeta() {
-    if (/[^0-9]+/.test(inputNumerosTarjeta.value)) {
+    if (/[^0-9]+/.test(inputNumerosTarjeta.value)) { // verifica si hay caracteres que no sean numeros
         errorNumero.textContent = 'Solo se permiten números';
         inputNumerosTarjeta.value = '';
     } else {
@@ -95,7 +98,7 @@ function actualizarCampo(input, span, original) { //UTILIZANDO LOS PARAMETRO
 }
 
 function verificarCampo(input, error, mensajeError) {
-    if (/[^0-9]+/.test(input.value)) {
+    if (/[^0-9]+/.test(input.value)) { // verifica si hay caracteres que no sean numeros
         error.textContent = mensajeError;
         input.value = '';
     } else if (inputMes.value > 12) { // Nueva verificación de límite
@@ -146,7 +149,7 @@ function actualizarCVV() {
 }
 
 function verificarCVV() {
-    if (/[^0-9]+/.test(inputCVV.value)) {
+    if (/[^0-9]+/.test(inputCVV.value)) { // verifica si hay caracteres que no sean numeros
         errorNumber.textContent = 'Solo se permiten números';
         inputCVV.value = '';
     } else {
