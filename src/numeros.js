@@ -27,10 +27,6 @@ function verificarNumeroTarjeta() {
     inputNumerosTarjeta.value = '';
     inputNumerosTarjeta.style.outlineColor = '#ff0000';
     inputNumerosTarjeta.style.borderColor = '#ff0000';
-  } else if (inputNumerosTarjeta.value.length < 16) { // verifica si el número de dígitos es menor a 16
-    errorNumero.textContent = 'Debe ingresar 16 dígitos';
-    inputNumerosTarjeta.style.outlineColor = '#ff0000';
-    inputNumerosTarjeta.style.borderColor = '#ff0000';
   } else {
     errorNumero.textContent = '';
     inputNumerosTarjeta.style.outlineColor = '#146c94';
@@ -44,7 +40,7 @@ function borrarNumeroTarjeta() {
   errorNumero.textContent = '';
   inputNumerosTarjeta.style.outlineColor = '';
   inputNumerosTarjeta.style.borderColor = '';
-  actualizarTarjeta();
+  actualizarCVV();
 }
 
 
@@ -52,8 +48,11 @@ function borrarNumeroTarjeta() {
 inputNumerosTarjeta.addEventListener('blur', function() {
   if (inputNumerosTarjeta.value.length < 16) {
     borrarNumeroTarjeta();
+    errorNumero.textContent = 'Debe ingresar 16 dígitos';
+    inputNumerosTarjeta.style.outlineColor = '#ff0000';
+    inputNumerosTarjeta.style.borderColor = '#ff0000';
   }
-});
+});  
 
 inputNumerosTarjeta.addEventListener('change', function() {
   verificarNumeroTarjeta();

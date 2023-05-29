@@ -17,10 +17,6 @@ function verificarCVV() {
         inputCVV.value = '';
         inputCVV.style.outlineColor = '#ff0000';
         inputCVV.style.borderColor= '#ff0000';
-    } else if (inputCVV.value.length < 3) { // verifica si el número de dígitos es menor a 16
-        errorNumber.textContent = 'Debe ingresar 3 dígitos';
-        inputCVV.style.outlineColor = '#ff0000';
-        inputCVV.style.borderColor = '#ff0000';
     } else {
         errorNumber.textContent = '';
         inputCVV.style.outlineColor = '#146c94';
@@ -29,7 +25,7 @@ function verificarCVV() {
     }
 }
 
-function borrarNumeroTarjeta() {
+function borrarNumero() {
     inputCVV.value = '';
     errorNumber.textContent = '';
     inputCVV.style.outlineColor = '';
@@ -41,9 +37,12 @@ function borrarNumeroTarjeta() {
 
 inputCVV.addEventListener('blur', function() {
     if (inputCVV.value.length < 3) {
-      borrarNumeroTarjeta();
+      borrarNumero();
+      errorNumber.textContent = 'Debe ingresar 3 dígitos';
+      inputCVV.style.outlineColor = '#ff0000';
+      inputCVV.style.borderColor = '#ff0000';
     }
-  });  
+});
 
 inputCVV.addEventListener('change', function() {
   verificarCVV();
