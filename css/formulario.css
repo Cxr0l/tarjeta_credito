@@ -44,7 +44,7 @@
 }
 
 .input {
-    border: 1px solid var(--light);
+    border: 1px solid var(--very-dark);
     padding: .75rem;
     border-radius: .5rem;
     font-family: 'Space Grotesk';
@@ -58,7 +58,7 @@
     text-transform: uppercase;
     font-size: .75rem;
     letter-spacing: 1px;
-    color: var(--very-dark);
+    color: var(--blue);
     margin-bottom: .25rem;
 }
 

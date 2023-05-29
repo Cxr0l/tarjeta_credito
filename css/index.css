@@ -9,12 +9,11 @@
     --white: hsl(0, 0%, 100%);
     --light: #d8d5d2;
     --dark: hsl(279, 6%, 55%);
-    --very-dark: #0B2447;
+    --very-dark: #146c94;
+    --blue: #0B2447;
 
     --red: hsl(0, 100%, 66%);
-};
-
-{}
+}
 
 .body {
     margin: 0;

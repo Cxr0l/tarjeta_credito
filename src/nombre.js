@@ -24,16 +24,19 @@ function verificarNombreTarjeta() {
       errorHolder.textContent = '';
       inputNombreTarjeta.style.outlineColor = '#146c94';
       inputNombreTarjeta.style.borderColor = '#146c94';
+      actualizarTarjetaLetras();
     }
 }
 
-inputNombreTarjeta.addEventListener('input', function() {
-    actualizarTarjetaLetras();
+inputNombreTarjeta.addEventListener('change', function() {
     verificarNombreTarjeta();
-});
-
+  });
+  
 inputNombreTarjeta.addEventListener('keyup', function() {
-    if (inputNombreTarjeta.value === '') {
-        actualizarTarjetaLetras();
-    }
-});
+    verificarNombreTarjeta();
+  });
+  
+inputNombreTarjeta.addEventListener ('keydown', function() {
+    verificarNombreTarjeta();
+  });
+  
