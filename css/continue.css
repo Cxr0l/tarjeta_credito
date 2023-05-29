@@ -1,5 +1,5 @@
 .continue{
-    width: 28rem;
+    width: 29rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .continue button{
-    width: 100%;
+    width: 86%;
 }
 
 .close {

@@ -30,16 +30,29 @@ function verificarNumeroTarjeta() {
     errorNumero.textContent = '';
     inputNumerosTarjeta.style.outlineColor = '#146c94';
     inputNumerosTarjeta.style.borderColor = '#146c94';
+    actualizarTarjeta();
   }
 }
 
-inputNumerosTarjeta.addEventListener('input', function() {
-  actualizarTarjeta();
+// inputNumerosTarjeta.addEventListener('input', function() {
+//   actualizarTarjeta();
+//   verificarNumeroTarjeta();
+// });
+
+// inputNumerosTarjeta.addEventListener('keyup', function() {
+//   if (inputNumerosTarjeta.value === '') {
+//     actualizarTarjeta();
+//   }
+// });
+
+inputNumerosTarjeta.addEventListener('change', function() {
   verificarNumeroTarjeta();
 });
 
 inputNumerosTarjeta.addEventListener('keyup', function() {
-  if (inputNumerosTarjeta.value === '') {
-    actualizarTarjeta();
-  }
-});
+  verificarNumeroTarjeta();
+})
+
+inputNumerosTarjeta.addEventListener ('keydown', function() {
+  verificarNumeroTarjeta();
+})
