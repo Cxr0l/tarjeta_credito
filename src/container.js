@@ -45,32 +45,39 @@ const cardNumber = document.querySelector('.card-number');
 const numerosOriginales = cardNumber.textContent;
 const errorNumero = document.querySelector('.error-number');
 
-function actualizarTarjeta() {
-    if (inputNumerosTarjeta.value === '') {
-        cardNumber.textContent = numerosOriginales;
-    } else {
-        cardNumber.textContent = inputNumerosTarjeta.value;
-    }
+let numerosFormateados = numerosOriginales.replace(/([0-9]{4})/g, '$1 ');
+
+function actualizarTarjeta() { 
+  if (inputNumerosTarjeta.value === '') {
+    cardNumber.textContent = numerosOriginales;
+  } else {
+    numerosFormateados = agrupacionDeNumeros(); //hice mi funcion de agrupacionDeNumeros para poder poner los espacios
+    cardNumber.textContent = numerosFormateados;
+  }
 }
 
 function verificarNumeroTarjeta() {
-    if (/[^0-9]+/.test(inputNumerosTarjeta.value)) { // verifica si hay caracteres que no sean numeros
-        errorNumero.textContent = 'Solo se permiten números';
-        inputNumerosTarjeta.value = '';
-    } else {
-        errorNumero.textContent = '';
-    }
+  if (/[^0-9]+/.test(inputNumerosTarjeta.value)) { // verifica si hay caracteres que no sean numeros
+    errorNumero.textContent = 'Solo se permiten números';
+    inputNumerosTarjeta.value = '';
+  } else {
+    errorNumero.textContent = '';
+  }
 }
 
+function agrupacionDeNumeros() {
+  numerosFormateados = inputNumerosTarjeta.value.replace(/([0-9]{4})/g, '$1 ');
+  return numerosFormateados}
+
 inputNumerosTarjeta.addEventListener('input', function() {
-    actualizarTarjeta();
-    verificarNumeroTarjeta();
+  actualizarTarjeta();
+  verificarNumeroTarjeta();
 });
 
 inputNumerosTarjeta.addEventListener('keyup', function() {
-    if (inputNumerosTarjeta.value === '') {
-        actualizarTarjeta();
-    }
+  if (inputNumerosTarjeta.value === '') {
+    actualizarTarjeta();
+  }
 });
 
 
