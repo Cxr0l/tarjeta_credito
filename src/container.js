@@ -47,6 +47,12 @@ const errorNumero = document.querySelector('.error-number');
 
 let numerosFormateados = numerosOriginales.replace(/([0-9]{4})/g, '$1 ');
 
+function agrupacionDeNumeros() {
+    numerosFormateados = inputNumerosTarjeta.value.replace(/([0-9]{4})/g, '$1 ');
+    return numerosFormateados}
+
+    
+
 function actualizarTarjeta() { 
   if (inputNumerosTarjeta.value === '') {
     cardNumber.textContent = numerosOriginales;
@@ -64,10 +70,6 @@ function verificarNumeroTarjeta() {
     errorNumero.textContent = '';
   }
 }
-
-function agrupacionDeNumeros() {
-  numerosFormateados = inputNumerosTarjeta.value.replace(/([0-9]{4})/g, '$1 ');
-  return numerosFormateados}
 
 inputNumerosTarjeta.addEventListener('input', function() {
   actualizarTarjeta();
