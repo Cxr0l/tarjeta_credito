@@ -5,11 +5,12 @@ const errorNumero = document.querySelector('.error-number');
 
 let numerosFormateados = numerosOriginales.replace(/([0-9]{4})/g, '$1 '); //
 
+
+
 function agrupacionDeNumeros() { //Para que agrupe digitos de 4
     numerosFormateados = inputNumerosTarjeta.value.replace(/([0-9]{4})/g, '$1 ');
     return numerosFormateados}
 
-    
 
 function actualizarTarjeta() { 
   if (inputNumerosTarjeta.value === '') {
@@ -26,6 +27,10 @@ function verificarNumeroTarjeta() {
     inputNumerosTarjeta.value = '';
     inputNumerosTarjeta.style.outlineColor = '#ff0000';
     inputNumerosTarjeta.style.borderColor = '#ff0000';
+  } else if (inputNumerosTarjeta.value.length < 16) { // verifica si el número de dígitos es menor a 16
+    errorNumero.textContent = 'Debe ingresar 16 dígitos';
+    inputNumerosTarjeta.style.outlineColor = '#ff0000';
+    inputNumerosTarjeta.style.borderColor = '#ff0000';
   } else {
     errorNumero.textContent = '';
     inputNumerosTarjeta.style.outlineColor = '#146c94';
@@ -33,6 +38,22 @@ function verificarNumeroTarjeta() {
     actualizarTarjeta();
   }
 }
+
+function borrarNumeroTarjeta() {
+  inputNumerosTarjeta.value = '';
+  errorNumero.textContent = '';
+  inputNumerosTarjeta.style.outlineColor = '';
+  inputNumerosTarjeta.style.borderColor = '';
+  actualizarTarjeta();
+}
+
+
+
+inputNumerosTarjeta.addEventListener('blur', function() {
+  if (inputNumerosTarjeta.value.length < 16) {
+    borrarNumeroTarjeta();
+  }
+});
 
 inputNumerosTarjeta.addEventListener('change', function() {
   verificarNumeroTarjeta();
