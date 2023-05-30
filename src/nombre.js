@@ -13,7 +13,6 @@ function actualizarTarjetaLetras() {
 
 function verificarNombreTarjeta() {
     if (/^\s/.test(inputNombreTarjeta.value)) { // verifica si el primer carácter es un espacio en blanco
-      errorHolder.textContent = '';
       inputNombreTarjeta.value = '';
     } else if (/[^A-Za-zñÑáéíóúÁÉÍÓÚ\s]/.test(inputNombreTarjeta.value)) { // verifica si hay caracteres que no sean letras
       errorHolder.textContent = 'Solo se permiten letras';

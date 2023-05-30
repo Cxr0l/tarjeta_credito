@@ -9,7 +9,8 @@ let numerosFormateados = numerosOriginales.replace(/([0-9]{4})/g, '$1 '); //
 
 function agrupacionDeNumeros() { //Para que agrupe digitos de 4
     numerosFormateados = inputNumerosTarjeta.value.replace(/([0-9]{4})/g, '$1 ');
-    return numerosFormateados}
+    return numerosFormateados
+}
 
 
 function actualizarTarjeta() { 
@@ -40,7 +41,7 @@ function borrarNumeroTarjeta() {
   errorNumero.textContent = '';
   inputNumerosTarjeta.style.outlineColor = '';
   inputNumerosTarjeta.style.borderColor = '';
-  actualizarCVV();
+  actualizarTarjeta();
 }
 
 
