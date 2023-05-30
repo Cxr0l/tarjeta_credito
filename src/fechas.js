@@ -12,11 +12,10 @@ const errorMes = document.querySelector('.error-mes');
 
 ///////////////////////////////////MES
 function actualizarMes() {
-    if (inputMes.value === '') {
-        spanMes.textContent = mesOriginal;
-    } else {
-        spanMes.textContent = inputMes.value;
-    }
+    const mesIngresado = inputMes.value.trim().replace(/\D/g, '').slice(0, 2); // obtenemos los dos primeros dígitos del valor ingresado sin espacios ni caracteres no numéricos
+    const mesMostrado = mesIngresado.padStart(2, '0'); // agregamos un cero a la izquierda si el mes ingresado tiene un solo dígito
+    
+    spanMes.textContent = mesMostrado; // actualizamos el texto del elemento "span"
 }
 
 function verificarFechasMes() {
@@ -30,6 +29,7 @@ function verificarFechasMes() {
         inputMes.value = '';
         inputMes.style.outlineColor = '#ff0000';
         inputMes.style.borderColor = '#ff0000';
+        actualizarMes();
     } else {
         errorMes.textContent = '';
         inputMes.style.outlineColor = '#146c94';
@@ -54,11 +54,9 @@ inputMes.addEventListener ('keydown', function() {
 
 ///////////////////////////////AÑO
 function actualizarAño() {
-    if (inputAño.value === '') {
-        spanAño.textContent = añoOriginal;
-    } else {
-        spanAño.textContent = inputAño.value;
-    }
+    const añoIngresado = inputAño.value.trim().replace(/\D/g, '').slice(0, 2);
+    const añoMostrado = añoIngresado.padStart(2, '0'); 
+    spanAño.textContent = añoMostrado;
 }
 
 function verificarFechasAño() {
