@@ -20,25 +20,25 @@
     flex-direction: column;
 }
 
-.form-datos.doble{
+.form-datos.double{
     flex-direction: row;
     gap: 1rem;
 }
 
-.form-datos2.doble > div {
+.form-datos2.double > div {
     width: 50%;
 }
 
-.columna{
+.columns{
     display: flex;
     gap: .5rem;
 }
 
-.columna input {
+.columns input {
     width: 100%;
 }
 
-.filas {
+.rows {
     display: flex;
     flex-direction: column;
 }
@@ -70,14 +70,14 @@
     font-size: .80rem;
 }
 
-.error-doble{
+.error-double{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
 }
 
-.error-doble > div {
+.error-double > div {
     width: 50%;
     display: flex;
 }
